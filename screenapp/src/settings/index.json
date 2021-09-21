@@ -1,0 +1,39 @@
+{
+  "general": {
+    "appId": "61488c5c84cfe20006100391",
+    "appName": "lexa-flappy-bird-signage",
+    "appDisplayName": "lexa-flappy-bird-signage",
+    "provider": "app-container",
+    "type": "gdm",
+    "release": "GridApp v2.89.7",
+    "defaultLanguage": "",
+    "supportedLanguages": [],
+    "organizationId": "5f6df647e39d2a8e5f043d62",
+    "organizationName": "lexa"
+  },
+  "notifications": {
+    "org_id": "lexa",
+    "secret": "",
+    "endpoint": "https://push.ombori.com"
+  },
+  "app": {
+    "gridApp": {
+      "valid": true,
+      "settings": {
+        "mobileEndpoint": "https://pwa.omborigrid.com/lexa-flappy-bird-remote/"
+      },
+      "url": "https://gridapps.blob.core.windows.net/apps/61488a3f84cfe2000610015c/b01430d0-1a28-11ec-9600-155e4a4bc148",
+      "name": "lexa.flappy-bird-signage-0.1.2.gridapp",
+      "id": "6148aac484cfe20006101059",
+      "type": "application/x-gridapp",
+      "ref": "media",
+      "iconUrl": "https://gridapps.blob.core.windows.net/apps/61488a3f84cfe2000610015c%2Fb01430d0-1a28-11ec-9600-155e4a4bc148.png",
+      "gridapp": {
+        "id": "61488a3f84cfe2000610015c",
+        "buildId": "6148aac484cfe20006101059"
+      },
+      "filename": "6148aac484cfe20006101059.tar.gz",
+      "path": "/grid-settings/6148aac484cfe20006101059"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "app": {
+    "gridApp": {
+      "settings": {
+        "productName": "Foo bar",
+        "productPrice": "1.23 USD"
+      }
+    }
+  }
+}

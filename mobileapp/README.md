@@ -1,0 +1,1 @@
+This is a sample mobile application, intended to run via 'mobileapp' module on an ombori grid device.

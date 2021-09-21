@@ -4,7 +4,7 @@ src/settings.json
 src/settings
 
 # dependencies
-node_modules
+/node_modules
 /.pnp
 .pnp.js
 
