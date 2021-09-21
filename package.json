@@ -1,0 +1,59 @@
+{
+  "name": "lexa.flappy-bird-signage",
+  "version": "0.1.5",
+  "private": true,
+  "homepage": "./",
+  "scripts": {
+    "bootstrap": "mkdir src/settings && cp default.settings.json src/settings/index.json",
+    "start": "yarn schema && REACT_APP_MESSAGING_URL=ws://localhost:8088 react-scripts start",
+    "schema": "mkdir -p build && npx ts-schema src/schema.ts build",
+    "prodbuild": "cross-env GENERATE_SOURCEMAP=false react-scripts build && cp package.json build/",
+    "build": "rimraf build && yarn prodbuild && yarn schema && omg app build",
+    "eject": "react-scripts eject",
+    "pub": "omg app publish",
+    "settings": "omg app settings",
+    "upload-description": "omg app upload-description",
+    "connect": "omg dev ws"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@ombori/ga-messaging": "^2.90.2",
+    "@ombori/ga-settings": "^2.63.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/styled-components": "^5.1.14",
+    "qrcode.react": "^1.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "styled": "^1.0.0",
+    "styled-components": "^5.3.1",
+    "typescript": "~3.7.2"
+  },
+  "devDependencies": {
+    "@ombori/ga-cli": "^1.7.6",
+    "@ombori/ts-schema": "^2.14.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "cross-env": "^7.0.2",
+    "json-schema-defaults": "^0.4.0",
+    "rimraf": "^3.0.2"
+  }
+}
