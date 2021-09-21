@@ -32,9 +32,12 @@ function App() {
   return (
     <Container onMouseDown={flap}>
       {gameOver ? (
-        <>Start the game</>
+        <div>
+          <h1>You have died.</h1>
+          <button className="try">Try Again</button>
+        </div>
       ) : (
-        <>Flap</>
+        <button className="flap">Flap</button>
       )}
     </Container>
   );
