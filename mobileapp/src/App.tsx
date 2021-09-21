@@ -14,7 +14,7 @@ function App() {
   const settings = useSettings<Settings>();
   const connected = useStatus(); // true when we're connected to message bus
   const pub = usePublish();
-  const [gameOver, setGameOver] = useState<boolean>(true);
+  const [gameOver, setGameOver] = useState<boolean>(false);
 
   // send flap message when screen is tapped
   const flap = useCallback(() => {
