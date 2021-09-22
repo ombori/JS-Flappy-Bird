@@ -41,7 +41,7 @@ function App() {
         <div>
         <div className="qr">
           <QRCode value={remoteUrl} />
-          <h1 className="header">>Scan the QR code to begin</h1>
+          <h1 className="header">Scan the QR code to begin</h1>
         </div>
       )}
     </Container>
