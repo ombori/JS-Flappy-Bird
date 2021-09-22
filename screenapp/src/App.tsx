@@ -15,7 +15,7 @@ function App() {
 
   const flap = useFlap();
   const pub = usePublish();
-  const remoteUrl = useMobileRemote(settings?.mobileEndpoint);
+  const remoteUrl = useMobileRemote(settings?.remote?.prod?.url || '');
 
   // Service messages are coming in default channel and have `Remote.` prefix
   useSubscribe('Remote.connected', () => setClients(n => n + 1), [setClients]);
