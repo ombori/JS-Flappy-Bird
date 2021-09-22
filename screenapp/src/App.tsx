@@ -39,7 +39,9 @@ function App() {
       <Game />
       {(remoteUrl && clients === 0) && (
         <div>
+        <div className="qr">
           <QRCode value={remoteUrl} />
+          <h1 className="header">>Scan the QR code to begin</h1>
         </div>
       )}
     </Container>
