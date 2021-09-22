@@ -39,7 +39,7 @@ function App() {
       <Game />
       {(remoteUrl && clients === 0) && (
         <QRContainer>
-          <QR value={remoteUrl} size={400} />
+          <QR value={remoteUrl} size={400} bgColor="#DED895" fgColor="#503547" />
           <Text>Scan the QR code to begin</Text>
         </QRContainer>
       )}
@@ -51,12 +51,15 @@ const QR = styled(QRCode)`
   height: 200px;
   width: 200px;
   padding: 40px;
-  background: white;
+  background: #DED895;  
+  box-shadow: 10px 10px 0 #d7a84b;
+  border: 10px solid #503547;
 `
 
 const Text = styled.h1`
   margin-top: 80px;
   font-size: 3rem;
+  color: #503547;
 `
 
 const QRContainer = styled.div`
