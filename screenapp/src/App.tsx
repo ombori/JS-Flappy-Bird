@@ -39,7 +39,7 @@ function App() {
       <Game />
       {(remoteUrl && clients === 0) && (
         <QRContainer>
-          <QR value={remoteUrl} size={250} />
+          <QR value={remoteUrl} size={400} />
           <Text>Scan the QR code to begin</Text>
         </QRContainer>
       )}
@@ -50,12 +50,13 @@ function App() {
 const QR = styled(QRCode)`
   height: 200px;
   width: 200px;
-  padding: 20px;
+  padding: 40px;
   background: white;
 `
 
 const Text = styled.h1`
-  margin-top: 50px;
+  margin-top: 80px;
+  font-size: 3rem;
 `
 
 const QRContainer = styled.div`
@@ -65,7 +66,7 @@ const QRContainer = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  padding-top: 53vh;
+  padding-top: 60vh;
 `
 
 const Container = styled.div`
