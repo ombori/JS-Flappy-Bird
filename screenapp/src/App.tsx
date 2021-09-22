@@ -38,13 +38,36 @@ function App() {
     <Container onClick={flap}>
       <Game />
       {(remoteUrl && clients === 0) && (
-        <div>
-          <QRCode value={remoteUrl} />
-        </div>
+        <QRContainer>
+          <QR value={remoteUrl} size={400} />
+          <Text>Scan the QR code to begin</Text>
+        </QRContainer>
       )}
     </Container>
   );
 }
+
+const QR = styled(QRCode)`
+  height: 200px;
+  width: 200px;
+  padding: 40px;
+  background: white;
+`
+
+const Text = styled.h1`
+  margin-top: 80px;
+  font-size: 3rem;
+`
+
+const QRContainer = styled.div`
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  padding-top: 60vh;
+`
 
 const Container = styled.div`
   height: 100vh;

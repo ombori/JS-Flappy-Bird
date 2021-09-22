@@ -1,39 +1,56 @@
 {
   "general": {
-    "appId": "61488c5c84cfe20006100391",
-    "appName": "lexa-flappy-bird-signage",
-    "appDisplayName": "lexa-flappy-bird-signage",
+    "appId": "614b140eba044e0006209f10",
+    "appName": "flappy-bird-signage",
+    "appDisplayName": "Flappy Bird Signage",
     "provider": "app-container",
     "type": "gdm",
-    "release": "GridApp v2.89.7",
+    "release": "GridApp v2.90.2",
     "defaultLanguage": "",
     "supportedLanguages": [],
-    "organizationId": "5f6df647e39d2a8e5f043d62",
-    "organizationName": "lexa"
+    "organizationId": "6118d08774067d0006337d02",
+    "organizationName": "1-terapi"
   },
   "notifications": {
-    "org_id": "lexa",
-    "secret": "",
+    "org_id": "1-terapi",
     "endpoint": "https://push.ombori.com"
   },
   "app": {
     "gridApp": {
       "valid": true,
-      "settings": {
-        "mobileEndpoint": "https://pwa.omborigrid.com/lexa-flappy-bird-remote/"
-      },
-      "url": "https://gridapps.blob.core.windows.net/apps/61488a3f84cfe2000610015c/b01430d0-1a28-11ec-9600-155e4a4bc148",
-      "name": "lexa.flappy-bird-signage-0.1.2.gridapp",
-      "id": "6148aac484cfe20006101059",
+      "url": "https://gridapps.blob.core.windows.net/apps/614af835ba044e00062086cf/31527960-1bb2-11ec-83e9-7b3965ca8ff8",
+      "name": "1-terapi.flappy-bird-screenapp-0.1.7.gridapp",
+      "id": "614b3ef62187a700066ed3e1",
       "type": "application/x-gridapp",
       "ref": "media",
-      "iconUrl": "https://gridapps.blob.core.windows.net/apps/61488a3f84cfe2000610015c%2Fb01430d0-1a28-11ec-9600-155e4a4bc148.png",
+      "iconUrl": "https://gridapps.blob.core.windows.net/apps/614af835ba044e00062086cf%2F31527960-1bb2-11ec-83e9-7b3965ca8ff8.png",
       "gridapp": {
-        "id": "61488a3f84cfe2000610015c",
-        "buildId": "6148aac484cfe20006101059"
+        "id": "614af835ba044e00062086cf",
+        "buildId": "614b3ef62187a700066ed3e1"
       },
-      "filename": "6148aac484cfe20006101059.tar.gz",
-      "path": "/grid-settings/6148aac484cfe20006101059"
+      "settings": {
+        "remote": {
+          "prod": {
+            "isManualInput": false,
+            "spaces": [],
+            "__type": "MobileEndpoint",
+            "_id": "614afa7aba044e0006208a63",
+            "appId": "614afa7aba044e0006208a62",
+            "organizationId": "6118d08774067d0006337d02",
+            "urlId": "flappy-remote",
+            "displayName": "Default prod",
+            "notes": "",
+            "env": "prod",
+            "createdAt": "2021-09-22T09:42:18.965Z",
+            "updatedAt": "2021-09-22T09:42:18.965Z",
+            "__v": 0,
+            "id": "614afa7aba044e0006208a63",
+            "url": "https://pwa.omborigrid.com/flappy-remote/"
+          }
+        }
+      },
+      "filename": "614b3ef62187a700066ed3e1.tar.gz",
+      "path": "/grid-settings/614b3ef62187a700066ed3e1"
     }
   }
 }
