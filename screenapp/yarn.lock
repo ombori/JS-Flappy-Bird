@@ -1453,10 +1453,10 @@
     rimraf "^3.0.2"
     tar "^5.0.5"
 
-"@ombori/ga-messaging@^2.90.2":
-  version "2.90.2"
-  resolved "https://registry.npmjs.org/@ombori/ga-messaging/-/ga-messaging-2.90.2.tgz#e3fb877b9519505146f9981fdacac3a44e7557d1"
-  integrity sha512-OxgMS/pRh8PV3T9TIa1aOiLjWJs2FJ1t91TfRwg1T94FWjUIRVt0tVOVEYOK3UYbV747yS7/RzZNDG7w0c53vA==
+"@ombori/ga-messaging@^2.91.0":
+  version "2.91.0"
+  resolved "https://registry.yarnpkg.com/@ombori/ga-messaging/-/ga-messaging-2.91.0.tgz#22a375377ec1f36e6a78dfeee89c6df651dd2d7a"
+  integrity sha512-Sd3XGnyCmBSFmw7MYIjHPh2Fr9HXq2eMlsKb/p7SLsZnJbQgB5LKIRBICkj+wIMl8Tg1AJOChiVoQd7w3+WgoA==
 
 "@ombori/ga-settings@^2.63.2":
   version "2.63.3"
