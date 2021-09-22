@@ -31,7 +31,6 @@
         ]
     },
     "dependencies": {
-        "@ombori/ga-messaging": "^2.90.2",
         "@ombori/ga-messaging": "^2.91.0",
         "@ombori/ga-settings": "^2.63.2",
         "@testing-library/jest-dom": "^4.2.4",
