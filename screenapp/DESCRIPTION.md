@@ -1,4 +1,4 @@
-# Flappy Bird Signage #
-by Lexa
+# Flappy Bird Screen App #
+by Ombori
 
-Flappy bird signage
+Flappy bird Screen App
