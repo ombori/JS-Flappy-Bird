@@ -3,6 +3,15 @@ import React, { useEffect, useRef, useCallback } from 'react';
 let gameStartedHandler: () => void = () => { };
 let gameOverHandler: () => void = () => { };
 
+const DEFAULT_GAP = 85;
+const DEFAULT_GRAVITY = 1;
+const DEFAULT_THRUST = 3.6;
+const G = .125;
+
+let GRAVITY = G * DEFAULT_GRAVITY;
+let GAP = DEFAULT_GAP;
+let THRUST = DEFAULT_THRUST;
+
 const RAD = Math.PI / 180;
 
 let frames = 0;
@@ -52,14 +61,13 @@ const bg = {
 const pipe = {
   top: { sprite: new Image() },
   bot: { sprite: new Image() },
-  gap: 100, // 85,
   moved: true,
   pipes: [] as { x: number, y: number }[],
   draw: function (sctx: CanvasRenderingContext2D, scrn: HTMLCanvasElement) {
     for (let i = 0; i < this.pipes.length; i++) {
       let p = this.pipes[i];
       sctx?.drawImage(this.top.sprite, p.x, p.y)
-      sctx?.drawImage(this.bot.sprite, p.x, p.y + (this.top.sprite.height) + this.gap)
+      sctx?.drawImage(this.bot.sprite, p.x, p.y + (this.top.sprite.height) + GAP)
     }
   },
   update: function (screen: HTMLCanvasElement) {
@@ -92,8 +100,6 @@ const bird = {
   x: 50,
   y: 100,
   speed: 0,
-  gravity: .125 * 0.75,
-  thrust: 3.6,
   frame: 0,
   draw: function (sctx: CanvasRenderingContext2D, scrn: HTMLCanvasElement) {
     let h = this.animations[this.frame].sprite.height;
@@ -116,7 +122,7 @@ const bird = {
         this.frame += (frames % 5 === 0) ? 1 : 0;
         this.y += this.speed;
         this.setRotation()
-        this.speed += this.gravity;
+        this.speed += GRAVITY;
         if (this.y + r >= gnd.y || this.collisioned()) {
           state.curr = state.gameOver;
           gameOverHandler();
@@ -128,7 +134,7 @@ const bird = {
         if (this.y + r < gnd.y) {
           this.y += this.speed;
           this.setRotation()
-          this.speed += this.gravity * 2;
+          this.speed += GRAVITY * 2;
         }
         else {
           this.speed = 0;
@@ -147,15 +153,15 @@ const bird = {
   flap: function () {
     if (this.y > 0) {
       SFX.flap.play();
-      this.speed = -this.thrust;
+      this.speed = -THRUST;
     }
   },
   setRotation: function () {
     if (this.speed <= 0) {
-      this.rotatation = Math.max(-25, -25 * this.speed / (-1 * this.thrust));
+      this.rotatation = Math.max(-25, -25 * this.speed / (-1 * THRUST));
     }
     else if (this.speed > 0) {
-      this.rotatation = Math.min(90, 90 * this.speed / (this.thrust * 2));
+      this.rotatation = Math.min(90, 90 * this.speed / (THRUST * 2));
     }
   },
   collisioned: function () {
@@ -165,7 +171,7 @@ const bird = {
     let y = pipe.pipes[0].y;
     let r = bird.height / 4 + bird.width / 4;
     let roof = y + (pipe.top.sprite.height);
-    let floor = roof + pipe.gap;
+    let floor = roof + GAP;
     let w = (pipe.top.sprite.width);
     if (this.x + r >= x) {
       if (this.x + r < x + w) {
@@ -325,7 +331,13 @@ const flap = () => {
 
 export const useFlap = () => flap;
 
-export const Game = () => {
+type GameSettings = {
+  gravity?: number,
+  gap?: number,
+  thrust?: number,
+}
+
+export const Game = (settings: GameSettings) => {
   const canvas = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -333,6 +345,12 @@ export const Game = () => {
       gameLoop(canvas.current);
     }
   }, []);
+
+  useEffect(() => {
+    GRAVITY = G * (settings.gravity || DEFAULT_GRAVITY);
+    GAP = settings.gap || DEFAULT_GAP;
+    THRUST = settings.thrust || DEFAULT_THRUST;
+  }, [settings.gravity, settings.gap, settings.thrust]);
 
   return (
     <canvas ref={canvas} width="276" height="414"></canvas>

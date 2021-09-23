@@ -21,4 +21,22 @@ export type Schema = {
    * @ui mobileEndpointPicker
    */
   remote: MobileEndpoint;
+
+  /**
+   * @title Gravity
+   * @default 1.0
+   */
+  gravity: number;
+
+  /**
+   * @title Pipe gap
+   * @default 85
+   */
+  gap: number;
+
+  /**
+   * @title Flap acceleration
+   * @default 3.6
+   */
+  thrust: number;
 }
