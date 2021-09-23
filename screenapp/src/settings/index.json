@@ -47,7 +47,10 @@
             "id": "614afa7aba044e0006208a63",
             "url": "https://pwa.omborigrid.com/flappy-remote/"
           }
-        }
+        },
+        "gravity": 2,
+        "gap": 100,
+        "thrust": 10
       },
       "filename": "614b3ef62187a700066ed3e1.tar.gz",
       "path": "/grid-settings/614b3ef62187a700066ed3e1"

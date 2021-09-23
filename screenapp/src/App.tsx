@@ -32,11 +32,11 @@ function App() {
     return <div>Loading gridapp settings...</div>
   }
 
-  console.log('url', remoteUrl);
+  const { gravity, gap, thrust } = settings;
 
   return (
     <Container onClick={flap}>
-      <Game />
+      <Game gravity={gravity} gap={gap} thrust={thrust} />
       {(remoteUrl && clients === 0) && (
         <QRContainer>
           <QR value={remoteUrl} size={400} bgColor="#DED895" fgColor="#503547" />
