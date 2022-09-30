@@ -1458,10 +1458,10 @@
   resolved "https://registry.yarnpkg.com/@ombori/ga-messaging/-/ga-messaging-2.91.0.tgz#22a375377ec1f36e6a78dfeee89c6df651dd2d7a"
   integrity sha512-Sd3XGnyCmBSFmw7MYIjHPh2Fr9HXq2eMlsKb/p7SLsZnJbQgB5LKIRBICkj+wIMl8Tg1AJOChiVoQd7w3+WgoA==
 
-"@ombori/ga-settings@^2.63.2":
-  version "2.63.3"
-  resolved "https://registry.yarnpkg.com/@ombori/ga-settings/-/ga-settings-2.63.3.tgz#b9d7e5e6b28ce2bfd6b8fe13a91179b70bff612e"
-  integrity sha512-OsWSEHRnXsmsU5rMPYm7Xg43h0JDzosIdlhMcfVgpOnXVNWbReUsbc4dyn+bSh2A9lo8dzgs5IszLmiIvtlZPg==
+"@ombori/ga-settings@^2.226.1":
+  version "2.226.2"
+  resolved "https://registry.yarnpkg.com/@ombori/ga-settings/-/ga-settings-2.226.2.tgz#c570148d5fd03dfe59bf4c2002641497fd2c15cc"
+  integrity sha512-wK7D+8rHHs4Uwiax9YzB3cMgrfr9ir3kI81Q7vQlG39GkxYm7e4D5/ei64PW1Vz7vr2WPLwguhcCjnOt25afGw==
   dependencies:
     babel-plugin-module-resolver "^4.0.0"
 
